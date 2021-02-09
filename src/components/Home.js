@@ -1,10 +1,5 @@
-import React from 'react';
-import { withLocale } from '../context/locale.context';
-
-function HomeComponent({ lang }) {
+export default function Home({ getTranslation}) {
     return (
-        <div className="Home">{lang.handle('hello')} {lang.handle('bye')}</div>
-    );
+        <h1>{getTranslation("hello")} {getTranslation("bye")}</h1>
+    )
 }
-
-export const Home = withLocale(HomeComponent);
